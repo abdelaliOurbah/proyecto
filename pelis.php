@@ -1,5 +1,4 @@
 <?php
-
 	$usuario="";//El usuario
     $clave="";//la clave del usuario
 	
@@ -58,8 +57,6 @@ if (empty($clave)){
 			header("Location: index.php?mensaje=".urlencode("Se necesita un usuario existente"));
 			exit;
 		}
-
-		
 
 ?>
 
