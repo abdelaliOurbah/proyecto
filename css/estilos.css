@@ -1,0 +1,121 @@
+body {
+    background-image: url("../img/fondo.jpg");
+    background-repeat: repeat;
+}
+header {
+    grid-area: cabecera;
+}
+
+nav {
+    grid-area: navegacion;
+}
+
+#izquierdo {
+    grid-area: izquierdo;
+}
+
+main {
+    grid-area: principal;
+}
+footer {
+    grid-area: pie;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    color: black;
+}
+
+/**********propiedades grid***********/
+.contenedor-grid {
+    display: grid;
+    grid-template-areas: 'cabecera cabecera cabecera'
+        'navegacion navegacion navegacion'
+        'izquierdo principal principal'
+        'izquierdo pie pie';
+}
+
+/**ponerle un poco de estilo a la pagina**/
+header,
+nav,
+aside,
+main,footer{
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+    border: 2px solid white;
+    color:#596269;
+}
+
+@media only screen and (max-width: 700px) {
+    /*En caso de cambio*/
+    
+}
+
+/*********Dividir las lineas y espacios*********/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    text-align: center;
+    padding: inherit;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: arial, helvetica;
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+nav a{
+    color: #999;
+    text-decoration: none;
+    padding: 2.5px;
+}
+
+nav a:hover,aside a:hover {
+    background: lightblue;
+}
+aside a{
+    color: #999;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2.5px;
+    
+}
+main img{
+    width: 150px;
+    height: auto;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
